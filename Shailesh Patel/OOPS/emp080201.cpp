@@ -40,6 +40,5 @@ int main()
     cout<<setw(20)<<"Emp Name"<<setw(10)<<"Emp Sal"<<endl;
     for(i=0;i<3;i++)
         emp[i].write_data();
-
-
+    return 0;
 }
