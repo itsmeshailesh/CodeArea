@@ -16,7 +16,7 @@ public :
 
 void employee::read_data()
 {
-    cout<<"Enter Employee number, Employee Name and Salary : ";
+    cout<<"Enter Employee number, Employee Name and Salary : \n";
     cin>>emp_no;
     fflush(stdin);
     cin.getline(name,20);
@@ -24,8 +24,8 @@ void employee::read_data()
 }
 void employee::write_data()
 {
-    cout<<setw(10)<<emp_no<<"  ";
-    cout.setf(ios::left,ios::adjustfield);
+    //cout.setf(ios::left,ios::adjustfield);
+    cout<<setw(10)<<emp_no;
     cout<<setw(20)<<name<<setw(10)<<sal<<endl;
 }
 
@@ -35,9 +35,8 @@ int main()
     int i;
     for(i=0;i<3;i++)
         emp[i].read_data();
-    cout.setf(ios::right,ios::adjustfield);
-    cout<<setw(10)<<"Emp No.  ";
     cout.setf(ios::left,ios::adjustfield);
+    cout<<setw(10)<<"Emp No.";
     cout<<setw(20)<<"Emp Name"<<setw(10)<<"Emp Sal"<<endl;
     for(i=0;i<3;i++)
         emp[i].write_data();
