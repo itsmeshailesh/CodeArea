@@ -37,16 +37,12 @@ public :
                 {
                     for(int j=0;j<c;j++)
                         {
-                            mat[i][j]=0;
-                            for(int k=0;k<r;k++)
-                                for(int l=0;l<c;l++)
-                                {   int sum=0;
-                                    for(int m=0;m<A.c;m++)
-                                    {
-                                        sum+=A.mat[k][m]*B.mat[m][l];
-                                    }
-                                    mat[k][l]=sum;
+                            int sum=0;
+                            for(int m=0;m<A.c;m++)
+                                {
+                                    sum+=A.mat[i][m]*B.mat[m][j];
                                 }
+                                mat[i][j]=sum;
 
                         }
                 }
